@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: Roboto;
   margin: 0;
   padding: 0;
   background: black;
@@ -16,4 +16,14 @@ a {
 
 a:hover {
   border-bottom: 1px solid #0076ff;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("/fonts/SpaceMono-Regular.ttf");
 }
