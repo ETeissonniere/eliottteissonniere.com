@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import { header, paragraph } from "../css/text.module.css"
 
 type HeaderProps = {
@@ -12,7 +12,7 @@ export const Header = ({ content }: HeaderProps) => (
 )
 
 type ParagraphProps = {
-    children: string,
+    children: ReactNode,
 }
 
 export const Paragraph = ({ children }: ParagraphProps) => (

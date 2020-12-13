@@ -9,6 +9,15 @@ body {
   max-height: 100%;
 }
 
+a {
+  color: white;
+}
+
+a:hover {
+  color: black;
+  background: white;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("/fonts/Roboto-Light.ttf");

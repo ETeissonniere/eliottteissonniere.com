@@ -25,3 +25,7 @@
   text-align: justify;
   text-justify: auto;
 }
+
+.presentationContainer > a {
+  text-decoration: underline;
+}
