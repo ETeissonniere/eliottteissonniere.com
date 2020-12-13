@@ -1,8 +1,21 @@
+import Image from 'next/image'
 import Layout from '../components/Layout'
+import { bgWrap } from "../css/index.module.css"
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
+  <Layout title="Eliott Teissonniere">
+    <div className={bgWrap}>
+      <Image
+        src="/images/background.jpg"
+        layout="fill"
+        className="home-background"
+      />
+    </div>
+    <div>
+      Image Component
+      <br />
+      as a Background
+    </div>
   </Layout>
 )
 
