@@ -19,12 +19,12 @@ a:hover {
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto-Light.ttf");
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Light.ttf');
   font-weight: lighter;
 }
 
 @font-face {
-  font-family: "SpaceMono";
-  src: url("/fonts/SpaceMono-Regular.ttf");
+  font-family: 'SpaceMono';
+  src: url('/fonts/SpaceMono-Regular.ttf');
 }

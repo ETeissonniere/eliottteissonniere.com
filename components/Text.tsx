@@ -1,22 +1,18 @@
-import React, { ReactNode } from "react"
-import { header, paragraph } from "../css/text.module.css"
+import React, { ReactNode } from 'react';
+import { header, paragraph } from '../css/text.module.css';
 
 type HeaderProps = {
-    content: string,
-}
+  content: string;
+};
 
 export const Header = ({ content }: HeaderProps) => (
-    <div className={header}>
-        {content}
-    </div>
-)
+  <div className={header}>{content}</div>
+);
 
 type ParagraphProps = {
-    children: ReactNode,
-}
+  children: ReactNode;
+};
 
 export const Paragraph = ({ children }: ParagraphProps) => (
-    <div className={paragraph}>
-        {children}
-    </div>
-)
+  <div className={paragraph}>{children}</div>
+);
