@@ -38,7 +38,7 @@ const IndexPage = () => (
         <Link href="https://en.unesco.org/news/netexplo-forum-celebrated-its-10th-edition">
           <a>NetExplo prize from UNESCO in 2017</a>
         </Link>
-        , made the world’s first marriage dApp on Ethereum and lead{' '}
+        , made the world’s first marriage dApp on Ethereum and leads{' '}
         <Link href="https://nodle.io">
           <a>Nodle's</a>
         </Link>{' '}
