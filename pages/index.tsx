@@ -3,35 +3,29 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import { Header, Paragraph } from '../components/Text';
 import Links from '../components/links';
-import { bgWrap, presentationContainer } from '../css/index.module.css';
+import { bgWrap, cover, presentationContainer } from '../css/index.module.css';
 
 const IndexPage = () => (
   <Layout title="Eliott Teissonniere">
     <div className={bgWrap}>
-      <Image
-        src="/images/background.jpg"
-        layout="fill"
-        className="home-background"
-      />
+      <Image src="/images/background.jpg" layout="fill" className={cover} />
     </div>
-    <div>
-      <Links
-        links={[
-          { name: 'Consulting', link: 'https://nuclei.studio/' },
-          {
-            name: 'Governance Research Institute',
-            link: 'https://governanceresearch.institute/',
-          },
-          { name: 'Writing', link: 'https://medium.com/@eliott_t' },
-          { name: 'Open Source', link: 'https://github.com/ETeissonniere' },
-          { name: 'Twitter', link: 'https://twitter.com/EliottTeiss' },
-          {
-            name: 'LinkedIn',
-            link: 'https://www.linkedin.com/in/eliott-teissonniere/',
-          },
-        ]}
-      />
-    </div>
+    <Links
+      links={[
+        { name: 'Consulting', link: 'https://nuclei.studio/' },
+        {
+          name: 'Governance Research Institute',
+          link: 'https://governanceresearch.institute/',
+        },
+        { name: 'Writing', link: 'https://medium.com/@eliott_t' },
+        { name: 'Open Source', link: 'https://github.com/ETeissonniere' },
+        { name: 'Twitter', link: 'https://twitter.com/EliottTeiss' },
+        {
+          name: 'LinkedIn',
+          link: 'https://www.linkedin.com/in/eliott-teissonniere/',
+        },
+      ]}
+    />
     <div className={presentationContainer}>
       <Header content="Eliott Teissonnière" />
       <Paragraph>
