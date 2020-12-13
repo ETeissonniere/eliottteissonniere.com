@@ -1,0 +1,24 @@
+.linksMenu {
+    position: fixed;
+    top: 50vh;
+    right: 5vw;
+    left: 70vw;
+    transform: translateY(-50%);
+    text-align: right;
+    text-transform: capitalize;
+    font-family: SpaceMono;
+    font-size: 1.5em;
+}
+
+.linksMenu > ul {
+    list-style-type: none;
+}
+
+.linksMenu > ul > li:not(:last-child) {
+    padding-bottom: 8vh;
+}
+
+.linksMenu > ul > li > a {
+    color: white;
+    text-decoration: none;
+}
