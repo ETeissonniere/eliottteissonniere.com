@@ -1,0 +1,11 @@
+.header {
+    font-family: SpaceMono;
+    font-size: 2em;
+}
+
+.paragraph {
+    padding-top: 1em;
+    font-family: Roboto;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}

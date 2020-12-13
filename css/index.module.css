@@ -7,12 +7,21 @@
 }
 
 .bgWrap::after {
-    content: "";
-    background: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+  content: "";
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.presentationContainer {
+  padding-left: 10vh;
+  padding-right: 85vh;
+  padding-bottom: 10vh;
+  padding-top: 50vh;
+  text-align: justify;
+  text-justify: auto;
 }
