@@ -44,6 +44,7 @@ const Layout = ({
         images: [
           {
             url: 'https://eliott.teissonniere.org/images/background.jpg',
+            alt: 'twitter card',
           },
         ],
       }}

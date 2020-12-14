@@ -10,6 +10,7 @@ const IndexPage = () => (
     <div className={styles.bgWrap}>
       <Image
         src="/images/background.jpg"
+        alt="background - mountains and clouds"
         layout="fill"
         className={styles.cover}
       />
