@@ -29,3 +29,72 @@ a:hover {
   font-family: 'SpaceMono';
   src: url('/fonts/SpaceMono-Regular.ttf');
 }
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: grey;
+  height: 2px;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: white;
+}
+
+/* This positions the cross centrally in the button */
+.bm-cross-button {
+  top: 25px !important;
+  right: 25px !important;
+  width: 25px !important;
+  height: 25px !important;
+}
+
+.bm-item:focus {
+  outline: none;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: black;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.5rem;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bm-item {
+  padding: 0;
+  text-align: center;
+}
+
+/* Avoid weird scroll stuff */
+.bm-item-list {
+  display: inline;
+}
+
+@media (min-width: 700px) {
+  .bm-burger-button {
+    display: none !important;
+  }
+}
