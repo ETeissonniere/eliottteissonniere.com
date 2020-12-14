@@ -6,7 +6,7 @@ import Links from '../components/Links';
 import styles from '../css/index.module.css';
 
 const IndexPage = () => (
-  <Layout title="Eliott Teissonniere">
+  <Layout>
     <div className={styles.bgWrap}>
       <Image
         src="/images/background.jpg"

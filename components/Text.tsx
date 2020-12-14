@@ -6,7 +6,7 @@ type HeaderProps = {
 };
 
 export const Header = ({ content }: HeaderProps) => (
-  <div className={styles.header}>{content}</div>
+  <h1 className={styles.header}>{content}</h1>
 );
 
 type ParagraphProps = {

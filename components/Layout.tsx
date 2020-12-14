@@ -7,7 +7,10 @@ type Props = {
   title?: string;
 };
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
+const Layout = ({
+  children,
+  title = 'Eliott Teissonniere - Entrepreneur, Polymath and Engineer',
+}: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -29,8 +32,9 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       />
     </Head>
     <NextSeo
-      title="Eliott Teissonniere"
-      description="Personal website of Eliott Teissonniere."
+      title={title}
+      description="Learn more about Eliott Teissonniere's journey and past work on his personal website. Connect with him using the provided links at your discretion."
+      canonical="https://eliott.teissonniere.org"
       twitter={{
         handle: '@EliottTeiss',
         cardType: 'summary_large_image',
