@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { scaleDown as Menu } from 'react-burger-menu';
-import { linksMenu, menuUl, mobileMenuElem } from '../css/links.module.css';
+import styles from '../css/links.module.css';
 
 type Props = {
   links: Array<{ name: string; link: string }>;
@@ -9,8 +9,8 @@ type Props = {
 
 const Links = ({ links }: Props) => (
   <div>
-    <div className={linksMenu}>
-      <ul className={menuUl}>
+    <div className={styles.linksMenu}>
+      <ul className={styles.menuUl}>
         {links.map((item) => (
           <li>
             <Link href={item.link}>
@@ -21,11 +21,11 @@ const Links = ({ links }: Props) => (
       </ul>
     </div>
     <Menu right customCrossIcon={<img src="images/cross.svg" />}>
-      <ul className={menuUl}>
+      <ul className={styles.menuUl}>
         {links.map((item) => (
           <li>
             <Link href={item.link}>
-              <a className={mobileMenuElem}>{item.name}</a>
+              <a className={styles.mobileMenuElem}>{item.name}</a>
             </Link>
           </li>
         ))}

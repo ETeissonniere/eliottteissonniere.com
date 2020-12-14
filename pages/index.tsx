@@ -3,12 +3,16 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import { Header, Paragraph } from '../components/Text';
 import Links from '../components/links';
-import { bgWrap, cover, presentationContainer } from '../css/index.module.css';
+import styles from '../css/index.module.css';
 
 const IndexPage = () => (
   <Layout title="Eliott Teissonniere">
-    <div className={bgWrap}>
-      <Image src="/images/background.jpg" layout="fill" className={cover} />
+    <div className={styles.bgWrap}>
+      <Image
+        src="/images/background.jpg"
+        layout="fill"
+        className={styles.cover}
+      />
     </div>
     <Links
       links={[
@@ -26,7 +30,7 @@ const IndexPage = () => (
         },
       ]}
     />
-    <div className={presentationContainer}>
+    <div className={styles.presentationContainer}>
       <Header content="Eliott Teissonnière" />
       <Paragraph>
         Eliott Teissonniere is a polymath, engineer and entrepreneur. He used to

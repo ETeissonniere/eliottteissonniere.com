@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
-import { header, paragraph } from '../css/text.module.css';
+import styles from '../css/text.module.css';
 
 type HeaderProps = {
   content: string;
 };
 
 export const Header = ({ content }: HeaderProps) => (
-  <div className={header}>{content}</div>
+  <div className={styles.header}>{content}</div>
 );
 
 type ParagraphProps = {
@@ -14,5 +14,5 @@ type ParagraphProps = {
 };
 
 export const Paragraph = ({ children }: ParagraphProps) => (
-  <div className={paragraph}>{children}</div>
+  <div className={styles.paragraph}>{children}</div>
 );
