@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { Header, Paragraph } from '../components/Text';
-import Links from '../components/links';
+import Links from '../components/Links';
 import styles from '../css/index.module.css';
 
 const IndexPage = () => (
