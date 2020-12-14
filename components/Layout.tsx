@@ -39,7 +39,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         type: 'website',
         images: [
           {
-            url: 'images/background.jpg',
+            url: 'https://eliott.teissonniere.org/images/background.jpg',
           },
         ],
       }}
