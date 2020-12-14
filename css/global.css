@@ -37,6 +37,7 @@ a:hover {
   height: 30px;
   right: 36px;
   top: 36px;
+  display: none;
 }
 
 /* Color/shape of burger icon bars */
@@ -93,8 +94,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: inline;
 }
 
-@media (min-width: 700px) {
+@media (max-width: 700px), (max-height: 600px) {
   .bm-burger-button {
-    display: none !important;
+    display: unset;
   }
 }

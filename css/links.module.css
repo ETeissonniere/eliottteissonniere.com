@@ -28,7 +28,7 @@
   color: white;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 700px), (max-height: 600px) {
   .linksMenu {
     display: none;
   }

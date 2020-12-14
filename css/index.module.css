@@ -33,7 +33,7 @@
   text-decoration: underline;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 700px), (max-height: 600px) {
   .presentationContainer {
     padding: 5vh;
   }
