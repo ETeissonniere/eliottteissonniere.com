@@ -23,11 +23,13 @@ a:hover {
   font-family: 'Roboto';
   src: url('/fonts/Roboto-Light.ttf');
   font-weight: lighter;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'SpaceMono';
   src: url('/fonts/SpaceMono-Regular.ttf');
+  font-display: swap;
 }
 
 /* Position and sizing of burger button */
