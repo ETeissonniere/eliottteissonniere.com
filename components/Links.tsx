@@ -12,7 +12,7 @@ const Links = ({ links }: Props) => (
     <div className={styles.linksMenu}>
       <ul className={styles.menuUl}>
         {links.map((item) => (
-          <li>
+          <li key={item.name}>
             <Link href={item.link}>
               <a>{item.name}</a>
             </Link>
@@ -23,7 +23,7 @@ const Links = ({ links }: Props) => (
     <Menu right customCrossIcon={<img src="images/cross.svg" />}>
       <ul className={styles.menuUl}>
         {links.map((item) => (
-          <li>
+          <li key={item.name}>
             <Link href={item.link}>
               <a className={styles.mobileMenuElem}>{item.name}</a>
             </Link>
