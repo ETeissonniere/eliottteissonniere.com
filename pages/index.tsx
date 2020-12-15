@@ -12,7 +12,7 @@ const IndexPage = () => (
         src="/images/background.jpg"
         alt="background - mountains and clouds"
         layout="fill"
-        className={styles.cover}
+        objectFit="cover"
       />
     </div>
     <Links

@@ -16,10 +16,6 @@
   z-index: 1;
 }
 
-.cover {
-  object-fit: cover;
-}
-
 .presentationContainer {
   padding-left: 10vw;
   padding-right: 40vw;
