@@ -20,7 +20,7 @@ const Layout = ({
 
       <link
         rel="preload"
-        href="/fonts/Roboto-Regular.ttf"
+        href="/fonts/Roboto-Light.ttf"
         as="font"
         crossOrigin=""
       />
