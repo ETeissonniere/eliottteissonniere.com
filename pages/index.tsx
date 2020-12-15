@@ -13,6 +13,7 @@ const IndexPage = () => (
         alt="background - mountains and clouds"
         layout="fill"
         objectFit="cover"
+        loading="eager"
       />
     </div>
     <Links
