@@ -80,8 +80,9 @@ const IndexPage = () => (
         <Link href="https://www.xcelerator.berkeley.edu/x-network">
           <a>mentor at the Berkeley Blockchain Accelerator</a>
         </Link>{' '}
-        and advises various crypto and technology startups. He cofounded in 2020
-        the{' '}
+        and advises various crypto and technology startups via his company{' '}
+        <Link href="https://nuclei.studio">Nuclei Studio</Link>. He cofounded in
+        2020 the{' '}
         <Link href="https://governanceresearch.institute">
           <a>Governance Research Institute</a>
         </Link>{' '}
