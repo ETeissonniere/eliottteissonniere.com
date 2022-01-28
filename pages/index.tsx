@@ -18,11 +18,6 @@ const IndexPage = () => (
     </div>
     <Links
       links={[
-        { name: 'Consulting', link: 'https://nuclei.studio/' },
-        {
-          name: 'Governance Research Institute',
-          link: 'https://governanceresearch.institute/',
-        },
         { name: 'Writing', link: 'https://medium.com/@eliott_t' },
         { name: 'Open Source', link: 'https://github.com/ETeissonniere' },
         { name: 'Twitter', link: 'https://twitter.com/EliottTeiss' },
@@ -80,14 +75,9 @@ const IndexPage = () => (
         <Link href="https://www.xcelerator.berkeley.edu/x-network">
           <a>mentor at the Berkeley Blockchain Accelerator</a>
         </Link>{' '}
-        and advises various crypto and technology startups via his company{' '}
-        <Link href="https://nuclei.studio">Nuclei Studio</Link>. He cofounded in
-        2020 the{' '}
-        <Link href="https://governanceresearch.institute">
-          <a>Governance Research Institute</a>
-        </Link>{' '}
-        to research new governance models for companies, communities and
-        governments.
+        and advises various crypto and technology startups. He cofounded in 2020
+        the Governance Research Institute to research new governance models for
+        companies, communities and governments.
       </Paragraph>
     </div>
   </Layout>
