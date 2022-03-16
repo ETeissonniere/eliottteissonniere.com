@@ -18,7 +18,7 @@ const IndexPage = () => (
     </div>
     <Links
       links={[
-        { name: 'Writing', link: 'https://medium.com/@eliott_t' },
+        { name: 'Writing', link: 'https://eliottteissonniere.medium.com/' },
         { name: 'Open Source', link: 'https://github.com/ETeissonniere' },
         { name: 'Twitter', link: 'https://twitter.com/EliottTeiss' },
         {
