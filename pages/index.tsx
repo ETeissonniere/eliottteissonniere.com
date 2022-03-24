@@ -43,7 +43,7 @@ const IndexPage = () => (
         <Link href="https://nodle.io">
           <a>Nodle's</a>
         </Link>{' '}
-        Blockchain and Engineering teams for which he co-invented various{' '}
+        Blockchain and Engineering teams for which he co-invented multiple{' '}
         <Link href="https://patents.google.com/?inventor=Eliott+Teissonniere">
           <a>pending and granted patents</a>
         </Link>
@@ -60,7 +60,7 @@ const IndexPage = () => (
         <Link href="https://www.coindesk.com/iot-app-nodle-moves-from-stellar-blockchain-to-polkadot">
           <a>CoinDesk</a>
         </Link>
-        ; and spoke at various high profile events such as the{' '}
+        ; and spoke at multiple high profile events such as the{' '}
         <Link href="https://hopin.com/events/paris-blockchain-week-summit">
           <a>Paris Blockchain Week</a>
         </Link>
