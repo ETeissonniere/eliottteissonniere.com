@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { Header, Paragraph } from '../components/Text';
@@ -7,14 +6,7 @@ import styles from '../css/index.module.css';
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.bgWrap}>
-      <Image
-        src="/images/background.jpg"
-        alt="background - mountains and clouds"
-        fill
-        loading="eager"
-      />
-    </div>
+    <div className={styles.bgWrap}></div>
     <Links
       links={[
         { name: 'Writing', link: 'https://eliottteissonniere.medium.com/' },
