@@ -11,8 +11,7 @@ const IndexPage = () => (
       <Image
         src="/images/background.jpg"
         alt="background - mountains and clouds"
-        layout="fill"
-        objectFit="cover"
+        fill
         loading="eager"
       />
     </div>

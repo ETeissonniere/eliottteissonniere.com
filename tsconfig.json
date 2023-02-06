@@ -28,5 +28,10 @@
   "include": [
     "**/*.ts",
     "**/*.tsx"
-  ]
+  ],
+  "paths": {
+    "react": [
+      "./node_modules/@types/react"
+    ]
+  }
 }
