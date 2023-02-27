@@ -13,7 +13,7 @@ const Links = ({ links }: Props) => (
       <ul className={styles.menuUl}>
         {links.map((item) => (
           <li key={item.name}>
-            <Link href={item.link}>
+            <Link legacyBehavior href={item.link}>
               <a>{item.name}</a>
             </Link>
           </li>
@@ -24,7 +24,7 @@ const Links = ({ links }: Props) => (
       <ul className={styles.menuUl}>
         {links.map((item) => (
           <li key={item.name}>
-            <Link href={item.link}>
+            <Link legacyBehavior href={item.link}>
               <a className={styles.mobileMenuElem}>{item.name}</a>
             </Link>
           </li>
