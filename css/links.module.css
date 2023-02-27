@@ -14,13 +14,13 @@
   text-transform: capitalize;
 }
 
-.menuUl > li:not(:last-child) {
+.menuUl>li:not(:last-child) {
   padding-bottom: 8vh;
 }
 
-.linksMenu > .menuUl > li > a {
+.linksMenu>.menuUl>li>a {
   text-decoration: none;
-  color: grey;
+  color: black;
 }
 
 .mobileMenuElem {
@@ -28,7 +28,8 @@
   color: white;
 }
 
-@media (max-width: 700px), (max-height: 600px) {
+@media (max-width: 700px),
+(max-height: 600px) {
   .linksMenu {
     display: none;
   }
