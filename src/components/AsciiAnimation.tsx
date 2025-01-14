@@ -1,39 +1,33 @@
 import { useState, useEffect } from 'react'
 
 const frames = [
-    `
-   /\\_/\\
-  ('>_<')  *tap*
+    `   /\\_/\\
+  ('>_<')
   /     \\
  /|  |  |\\
 (_\\__|__/_)
-   \\___/
-  `,
-    `
-   /\\_/\\
-  ('^_^')  *tap tap*
+   \\___/`,
+    `   /\\_/\\
+  ('^_^')
   /     \\
  /|  |  |\\
 (_\\__|__/_)
-   \\___/
-  `,
-    `
-   /\\_/\\
-  ('o_o')  *compile*
+   \\___/`,
+    `   /\\_/\\
+  ('o_o')
   /     \\
  /|  |  |\\
 (_\\__|__/_)
-   \\___/
-  `,
-    `
-   /\\_/\\
-  ('~_~')  *debug*
+   \\___/`,
+    `   /\\_/\\
+  ('~_~')
   /     \\
  /|  |  |\\
 (_\\__|__/_)
-   \\___/
-  `,
+   \\___/`,
 ]
+
+const messages = ['*tap*', '*tap tap*', '*compile*', '*debug*']
 
 export default function AsciiAnimation() {
     const [frameIndex, setFrameIndex] = useState(0)
@@ -47,8 +41,13 @@ export default function AsciiAnimation() {
     }, [])
 
     return (
-        <pre className="text-xs sm:text-sm md:text-base lg:text-lg whitespace-pre font-mono bg-black p-4 rounded-lg shadow-lg border border-green-400 animate-pulse">
-            {frames[frameIndex]}
-        </pre>
+        <div className="flex flex-col items-center">
+            <pre className="text-xs sm:text-sm whitespace-pre font-mono">
+                {frames[frameIndex]}
+            </pre>
+            <div className="mt-1 text-xs sm:text-sm text-green-400/80">
+                {messages[frameIndex]}
+            </div>
+        </div>
     )
 } 

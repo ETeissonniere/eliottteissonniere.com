@@ -27,7 +27,16 @@ const bioContent = [
 export default function BioSequence() {
     const [displayedLines, setDisplayedLines] = useState<string[]>([])
     const [completedLines, setCompletedLines] = useState<Set<number>>(new Set())
+    const [canScroll, setCanScroll] = useState(false)
     const bioRef = useRef<HTMLDivElement>(null)
+
+    // Check if we can scroll
+    const checkScroll = () => {
+        if (bioRef.current) {
+            const { scrollTop, scrollHeight, clientHeight } = bioRef.current
+            setCanScroll(scrollHeight - (scrollTop + clientHeight) > 10)
+        }
+    }
 
     useEffect(() => {
         let currentLine = 0
@@ -39,7 +48,8 @@ export default function BioSequence() {
                 }, 2000)
                 currentLine++
                 if (bioRef.current) {
-                    bioRef.current.scrollTop = bioRef.current.scrollHeight
+                    bioRef.current.scrollTop = 0
+                    checkScroll()
                 }
             } else {
                 clearInterval(interval)
@@ -49,29 +59,57 @@ export default function BioSequence() {
         return () => clearInterval(interval)
     }, [])
 
-    return (
-        <div ref={bioRef} className="h-full overflow-y-auto pr-6 scrollbar-thin scrollbar-thumb-green-400/50 hover:scrollbar-thumb-green-400 scrollbar-track-black/20 p-6">
-            <div className="space-y-3 text-left">
-                {displayedLines.map((line, index) => {
-                    const isCompleted = completedLines.has(index);
-                    const isList = line?.startsWith('-') ?? false;
-                    const isCommand = line?.startsWith('[') ?? false;
+    // Add scroll event listener
+    useEffect(() => {
+        const element = bioRef.current
+        if (element) {
+            element.addEventListener('scroll', checkScroll)
+            checkScroll() // Initial check
+            return () => element.removeEventListener('scroll', checkScroll)
+        }
+    }, [])
 
-                    return (
-                        <p
-                            key={index}
-                            className={`
-                                ${isCompleted ? 'hover:text-green-300 transition-colors duration-300' : 'typewriter'} 
-                                whitespace-pre-wrap break-words
-                                ${isList ? 'pl-6 opacity-90' : 'opacity-100'}
-                                ${isCommand ? 'text-green-500 font-bold' : ''}
-                            `}
-                        >
-                            {line}
-                        </p>
-                    );
-                })}
+    return (
+        <div className="relative h-full">
+            <div
+                ref={bioRef}
+                className="h-full overflow-y-auto pr-6 scrollbar-thin scrollbar-thumb-green-400/30 hover:scrollbar-thumb-green-400/50 scrollbar-track-black/20 p-6 scroll-smooth"
+                onScroll={checkScroll}
+            >
+                <div className="space-y-2 text-left">
+                    {displayedLines.map((line, index) => {
+                        const isCompleted = completedLines.has(index);
+                        const isList = line?.startsWith('-') ?? false;
+                        const isCommand = line?.startsWith('[') ?? false;
+                        const isSection = line?.startsWith('\n') ?? false;
+
+                        return (
+                            <p
+                                key={index}
+                                className={`
+                                    ${isCompleted ? 'hover:text-green-300 transition-colors duration-300' : 'typewriter'} 
+                                    whitespace-pre-wrap break-words
+                                    ${isList ? 'pl-6 opacity-90 hover:opacity-100' : 'opacity-100'}
+                                    ${isCommand ? 'text-green-500 font-bold tracking-wide' : ''}
+                                    ${isSection ? 'text-green-400 font-semibold mt-4' : ''}
+                                    ${!isCommand && !isSection ? 'text-green-400/90' : ''}
+                                    leading-relaxed
+                                `}
+                            >
+                                {isList && !line.startsWith('- ') ? '- ' + line.slice(1) : line}
+                            </p>
+                        );
+                    })}
+                    <div className="h-12" />
+                </div>
             </div>
+
+            {/* Scroll indicator */}
+            {canScroll && (
+                <div className="absolute bottom-2 right-2 text-green-400/50 hover:text-green-400/80 transition-all duration-300 text-lg">
+                    ▼
+                </div>
+            )}
         </div>
     )
 } 
