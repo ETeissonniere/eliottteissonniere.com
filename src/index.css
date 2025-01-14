@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: black;
+    color: #4ade80;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes typing {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.typewriter {
+    animation: typing 2s steps(40, end);
+}
+
+/* Scrollbar Styles */
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollbar-thumb-green-400::-webkit-scrollbar-thumb {
+    background-color: #4ade80;
+    border-radius: 3px;
+}
+
+.scrollbar-track-gray-800::-webkit-scrollbar-track {
+    background-color: #1f2937;
+    border-radius: 3px;
+}
