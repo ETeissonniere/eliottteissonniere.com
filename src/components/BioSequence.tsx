@@ -1,115 +1,63 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
+
+const Link = ({ href, children }: { href: string; children: React.ReactNode }) => (
+    <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sky-600 hover:text-sky-800 underline decoration-sky-200/50 hover:decoration-sky-600/30 transition-colors"
+    >
+        {children}
+    </a>
+)
 
 const bioContent = [
-    "[INITIALIZING BIO SEQUENCE]",
-    "\nUNIT DESIGNATION: Eliott Teissonniere",
-    "\nPRIMARY FUNCTIONS: Engineer, Entrepreneur, Blockchain Architect, Robot Whisperer",
-    "\nSECONDARY FUNCTIONS:",
-    "- Mentor at Berkeley Blockchain Accelerator",
-    "- Advisor to various crypto and technology startups",
-    "- Co-founder of Governance Research Institute (Est. 2020)",
-    "\nNOTABLE ACHIEVEMENTS:",
-    "- Co-inventor of multiple pending and granted patents",
-    "- Former CTO of BitNation (UNESCO NetExplo prize, 2017)",
-    "- Creator of world's first marriage dApp on Ethereum",
-    "- CTO and co-founder of Nodle and Click",
-    "\nMEDIA APPEARANCES:",
-    "- Featured in Decrypt, CoinTelegraph, CoinDesk",
-    "- Regular guest on blockchain and tech podcasts",
-    "\nCONFERENCE SUBROUTINES EXECUTED:",
-    "- Paris Blockchain Week",
-    "- Stanford Blockchain Conference",
-    "- European Commission",
-    "\n[TERMINATING BIO SEQUENCE]",
-    "\nWhen not executing primary functions, this unit can be found teaching its smart kettle to achieve sentience through decentralized governance protocols."
+    <>
+        I'm an engineering leader and technology entrepreneur focused on blockchain and decentralized systems. As CTO and Co-founder of {' '}
+        <Link href="https://www.nodle.com">Nodle</Link>, I'm building the world's largest decentralized IoT network, while also leading {' '}
+        <Link href="https://clickapp.com">Click</Link> in developing cutting-edge solutions for digital trust and content authenticity. Previously, I served as CTO of BitNation, where my team's innovative work in blockchain governance was recognized with the {' '}
+        <Link href="https://en.unesco.org/news/netexplo-forum-celebrated-its-10th-edition">UNESCO NetExplo prize in 2017</Link>.
+    </>,
+    <>
+        I'm passionate about growing the blockchain ecosystem through education and mentorship. I actively contribute at the {' '}
+        <Link href="https://www.xcelerator.berkeley.edu/x-network">Berkeley Blockchain Accelerator</Link> and lecture at the {' '}
+        <Link href="https://polkadot.academy">Polkadot Blockchain Academy</Link>, sharing insights on governance systems and decentralized technologies. Throughout my career, I've developed multiple {' '}
+        <Link href="https://patents.google.com/?inventor=Eliott+Teissonniere">patents in blockchain technology</Link>, particularly in IoT and decentralized networks.
+    </>,
+    <>
+        My work has been featured in leading tech publications including {' '}
+        <Link href="https://decrypt.co/16404/what-will-blockchain-look-like-in-2030-the-experts-speak">Decrypt</Link>, {' '}
+        <Link href="https://cointelegraph.com/news/nodle-outgrows-stellar-begins-to-migrate-to-own-blockchain">CoinTelegraph</Link>, and {' '}
+        <Link href="https://www.coindesk.com/iot-app-nodle-moves-from-stellar-blockchain-to-polkadot">CoinDesk</Link>. I regularly speak at major industry events including Paris Blockchain Week, Stanford Blockchain Conference, and the European Commission, and have contributed {' '}
+        <Link href="https://www.forbes.com/councils/eliottteissonniere/">thought leadership articles to Forbes</Link> on blockchain technology and AI.
+    </>,
+    <>
+        Beyond blockchain, I'm exploring how robotics can accelerate innovation by automating routine tasks, allowing teams to focus on high-impact creative work. I believe robotics will be key in unlocking human potential by handling the mundane, enabling us to tackle more challenging and meaningful problems.
+    </>
 ]
 
 export default function BioSequence() {
-    const [displayedLines, setDisplayedLines] = useState<string[]>([])
-    const [completedLines, setCompletedLines] = useState<Set<number>>(new Set())
-    const [canScroll, setCanScroll] = useState(false)
-    const bioRef = useRef<HTMLDivElement>(null)
-
-    // Check if we can scroll
-    const checkScroll = () => {
-        if (bioRef.current) {
-            const { scrollTop, scrollHeight, clientHeight } = bioRef.current
-            setCanScroll(scrollHeight - (scrollTop + clientHeight) > 10)
-        }
-    }
+    const [displayedParagraphs, setDisplayedParagraphs] = useState<React.ReactNode[]>([])
 
     useEffect(() => {
-        let currentLine = 0
-        const interval = setInterval(() => {
-            if (currentLine < bioContent.length) {
-                setDisplayedLines(prev => [...prev, bioContent[currentLine]])
-                setTimeout(() => {
-                    setCompletedLines(prev => new Set([...prev, currentLine]))
-                }, 2000)
-                currentLine++
-                if (bioRef.current) {
-                    bioRef.current.scrollTop = 0
-                    checkScroll()
-                }
-            } else {
-                clearInterval(interval)
-            }
-        }, 200)
-
-        return () => clearInterval(interval)
-    }, [])
-
-    // Add scroll event listener
-    useEffect(() => {
-        const element = bioRef.current
-        if (element) {
-            element.addEventListener('scroll', checkScroll)
-            checkScroll() // Initial check
-            return () => element.removeEventListener('scroll', checkScroll)
-        }
+        // Display all paragraphs immediately
+        setDisplayedParagraphs(bioContent)
     }, [])
 
     return (
-        <div className="relative h-full">
-            <div
-                ref={bioRef}
-                className="h-full overflow-y-auto pr-6 scrollbar-thin scrollbar-thumb-green-400/30 hover:scrollbar-thumb-green-400/50 scrollbar-track-black/20 p-6 scroll-smooth"
-                onScroll={checkScroll}
-            >
-                <div className="space-y-2 text-left">
-                    {displayedLines.map((line, index) => {
-                        const isCompleted = completedLines.has(index);
-                        const isList = line?.startsWith('-') ?? false;
-                        const isCommand = line?.startsWith('[') ?? false;
-                        const isSection = line?.startsWith('\n') ?? false;
-
-                        return (
-                            <p
-                                key={index}
-                                className={`
-                                    ${isCompleted ? 'hover:text-green-300 transition-colors duration-300' : 'typewriter'} 
-                                    whitespace-pre-wrap break-words
-                                    ${isList ? 'pl-6 opacity-90 hover:opacity-100' : 'opacity-100'}
-                                    ${isCommand ? 'text-green-500 font-bold tracking-wide' : ''}
-                                    ${isSection ? 'text-green-400 font-semibold mt-4' : ''}
-                                    ${!isCommand && !isSection ? 'text-green-400/90' : ''}
-                                    leading-relaxed
-                                `}
-                            >
-                                {isList && !line.startsWith('- ') ? '- ' + line.slice(1) : line}
-                            </p>
-                        );
-                    })}
-                    <div className="h-12" />
-                </div>
-            </div>
-
-            {/* Scroll indicator */}
-            {canScroll && (
-                <div className="absolute bottom-2 right-2 text-green-400/50 hover:text-green-400/80 transition-all duration-300 text-lg">
-                    ▼
-                </div>
-            )}
+        <div className="space-y-10">
+            {displayedParagraphs.map((paragraph, index) => (
+                <p
+                    key={index}
+                    className="text-zinc-600 text-base md:text-lg leading-relaxed opacity-0 animate-slide-up"
+                    style={{
+                        animationDelay: `${index * 150}ms`,
+                        animationFillMode: 'forwards'
+                    }}
+                >
+                    {paragraph}
+                </p>
+            ))}
         </div>
     )
 } 
