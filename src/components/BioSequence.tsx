@@ -15,7 +15,7 @@ const bioContent = [
     <>
         I'm an engineering leader and technology entrepreneur focused on blockchain and decentralized systems. As CTO and Co-founder of {' '}
         <Link href="https://www.nodle.com">Nodle</Link>, I'm building the world's largest decentralized IoT network, while also leading {' '}
-        <Link href="https://clickapp.com">Click</Link> in developing cutting-edge solutions for digital trust and content authenticity. Previously, I served as CTO of BitNation, where my team's innovative work in blockchain governance was recognized with the {' '}
+        <Link href="https://clickapp.com">Click</Link> in developing new solutions for digital trust and content authenticity. Previously, I served as CTO of BitNation, where my team's work in blockchain governance was recognized with the {' '}
         <Link href="https://en.unesco.org/news/netexplo-forum-celebrated-its-10th-edition">UNESCO NetExplo prize in 2017</Link>.
     </>,
     <>
@@ -32,7 +32,7 @@ const bioContent = [
         <Link href="https://www.forbes.com/councils/eliottteissonniere/">thought leadership articles to Forbes</Link> on blockchain technology and AI.
     </>,
     <>
-        Beyond blockchain, I'm exploring how robotics can accelerate innovation by automating routine tasks, allowing teams to focus on high-impact creative work. I believe robotics will be key in unlocking human potential by handling the mundane, enabling us to tackle more challenging and meaningful problems.
+        Beyond blockchain, I'm exploring how robotics can accelerate innovation by automating routine or repetitive tasks, allowing humanity to focus on higher impact work. I believe robotics will be key in unlocking human potential and unlocking a new industrial revolution.
     </>
 ]
 
