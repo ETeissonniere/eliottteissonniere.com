@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -16,90 +14,10 @@ body {
     color: #18181b;
 }
 
-/* Subtle tech pattern overlay */
-.tech-pattern {
-    background-image:
-        linear-gradient(to right, rgba(30, 41, 59, 0.7) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(30, 41, 59, 0.7) 1px, transparent 1px);
-    background-size: 24px 24px;
-}
-
-.glow {
-    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-}
-
-.link-hover {
-    position: relative;
-    text-decoration: none;
-}
-
-.link-hover::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: -2px;
-    left: 0;
-    background-color: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-.link-hover:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-up {
-    animation: fadeUp 0.5s ease-out forwards;
-}
-
 #root {
     height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-@keyframes typing {
-    from {
-        clip-path: inset(0 100% 0 0);
-    }
-
-    to {
-        clip-path: inset(0 0 0 0);
-    }
-}
-
-.typewriter {
-    animation: typing 2s steps(40, end);
-}
-
-/* Scrollbar Styles */
-.scrollbar-thin::-webkit-scrollbar {
-    width: 6px;
-}
-
-.scrollbar-thumb-green-400::-webkit-scrollbar-thumb {
-    background-color: #4ade80;
-    border-radius: 3px;
-}
-
-.scrollbar-track-gray-800::-webkit-scrollbar-track {
-    background-color: #1f2937;
-    border-radius: 3px;
 }
 
 .nav-link {
@@ -140,12 +58,6 @@ body {
 
 .animate-slide-up {
     animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.content-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2rem;
 }
 
 @media (max-width: 768px) {

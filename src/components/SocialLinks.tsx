@@ -14,6 +14,7 @@ export default function SocialLinks() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`${link.name} (opens in new tab)`}
                     className="nav-link text-base md:text-lg text-zinc-600 hover:text-zinc-900"
                 >
                     {link.name}

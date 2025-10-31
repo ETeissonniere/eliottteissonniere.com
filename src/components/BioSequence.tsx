@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react'
+import { type ReactNode } from 'react'
 
-const Link = ({ href, children }: { href: string; children: React.ReactNode }) => (
+const Link = ({ href, children }: { href: string; children: ReactNode }) => (
     <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={`${children} (opens in new tab)`}
         className="text-sky-600 hover:text-sky-800 underline decoration-sky-200/50 hover:decoration-sky-600/30 transition-colors"
     >
         {children}
@@ -37,16 +38,9 @@ const bioContent = [
 ]
 
 export default function BioSequence() {
-    const [displayedParagraphs, setDisplayedParagraphs] = useState<React.ReactNode[]>([])
-
-    useEffect(() => {
-        // Display all paragraphs immediately
-        setDisplayedParagraphs(bioContent)
-    }, [])
-
     return (
         <div className="space-y-10">
-            {displayedParagraphs.map((paragraph, index) => (
+            {bioContent.map((paragraph, index) => (
                 <p
                     key={index}
                     className="text-zinc-600 text-base md:text-lg leading-relaxed opacity-0 animate-slide-up"

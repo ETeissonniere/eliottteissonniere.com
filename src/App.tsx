@@ -23,7 +23,7 @@ function App() {
                         </p>
                     </header>
 
-                    <div className="grid md:grid-cols-[2.5fr,1fr] gap-16 md:gap-24">
+                    <div className="grid md:grid-cols-[5fr_2fr] gap-16 md:gap-24">
                         <div>
                             <BioSequence />
                         </div>
