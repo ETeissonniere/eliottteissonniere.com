@@ -1,13 +1,13 @@
 export default function SocialLinks() {
     const links = [
-        { name: 'Github', href: 'https://github.com/ETeissonniere' },
-        { name: 'Twitter', href: 'https://twitter.com/EliottTeiss' },
-        { name: 'LinkedIn', href: 'https://www.linkedin.com/in/eliott-teissonniere' },
-        { name: 'Robotics', href: 'https://accrobotics.com' }
+        { name: 'github', href: 'https://github.com/ETeissonniere' },
+        { name: 'twitter', href: 'https://twitter.com/EliottTeiss' },
+        { name: 'linkedin', href: 'https://www.linkedin.com/in/eliott-teissonniere' },
+        { name: 'robotics', href: 'https://accrobotics.com' }
     ]
 
     return (
-        <div className="flex flex-wrap justify-end gap-x-8 gap-y-4">
+        <div className="flex flex-wrap justify-end gap-x-6 md:gap-x-8 gap-y-3">
             {links.map(link => (
                 <a
                     key={link.name}
@@ -15,7 +15,7 @@ export default function SocialLinks() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${link.name} (opens in new tab)`}
-                    className="nav-link text-base md:text-lg text-zinc-600 hover:text-zinc-900"
+                    className="text-sm md:text-base text-zinc-500 hover:text-zinc-900 transition-colors font-medium lowercase tracking-wide hover:underline decoration-amber-300 decoration-2 underline-offset-4"
                 >
                     {link.name}
                 </a>
