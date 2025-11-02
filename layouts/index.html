@@ -1,0 +1,40 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+
+{{ define "css" }}
+<link rel="stylesheet" href="/css/main.css">
+{{ end }}
+
+{{ define "main" }}
+<div class="container">
+    {{ partial "sidebar.html" . }}
+
+    <main class="main">
+        {{ .Content }}
+
+        <div class="section">
+            <div class="section-title">Writing</div>
+            {{ $posts := where .Site.RegularPages "Section" "posts" }}
+            {{ if $posts }}
+            <ul class="essay-list">
+                {{ range $posts }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+            {{ else }}
+            <p class="coming-soon">Coming soon</p>
+            {{ end }}
+        </div>
+
+        {{ with .Site.Params.speaking }}
+        <div class="section">
+            <div class="section-title">Speaking & Teaching</div>
+            <ul>
+                {{ range . }}
+                <li>{{ .text | markdownify }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+    </main>
+</div>
+{{ end }}

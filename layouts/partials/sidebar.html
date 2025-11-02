@@ -1,0 +1,20 @@
+<aside class="sidebar">
+    <h1>{{ .Site.Params.author }}</h1>
+    <p class="tagline">{{ .Site.Params.tagline }}</p>
+
+    <div class="sidebar-section">
+        <div class="sidebar-title">Now</div>
+        <p>{{ .Site.Params.now }}</p>
+    </div>
+
+    <div class="sidebar-section">
+        <div class="sidebar-title">Links</div>
+        <ul class="sidebar-links">
+            {{ range .Site.Params.social }}
+            <li><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+
+    <img src="/robot.svg" class="robot-sidebar" alt="robot">
+</aside>

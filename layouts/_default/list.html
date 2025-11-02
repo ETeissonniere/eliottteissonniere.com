@@ -1,0 +1,21 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "css" }}
+<link rel="stylesheet" href="/css/main.css">
+{{ end }}
+
+{{ define "main" }}
+<div class="container">
+    {{ partial "sidebar.html" . }}
+
+    <main class="main">
+        <h1>{{ .Title }}</h1>
+
+        <ul class="essay-list">
+            {{ range .Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </main>
+</div>
+{{ end }}
