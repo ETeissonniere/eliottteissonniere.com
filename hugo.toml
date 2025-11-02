@@ -1,0 +1,36 @@
+baseURL = "https://eliottteissonniere.com/"
+languageCode = "en-us"
+title = "Eliott Teissonnière"
+
+# Disable default taxonomies since we're not using them
+disableKinds = ["taxonomy", "term"]
+
+[params]
+author = "Eliott Teissonnière"
+tagline = "Building for progress"
+now = "Satellite robotics infrastructure in San Francisco"
+
+[[params.social]]
+name = "Github"
+url = "https://github.com/eteissonniere"
+
+[[params.social]]
+name = "Twitter"
+url = "https://x.com/EliottTeiss"
+
+[[params.social]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/eliott-teissonniere"
+
+[[params.social]]
+name = "Email"
+url = "mailto:contact@eliottteissonniere.com"
+
+[[params.speaking]]
+text = "Distributed systems and decentralized governance at Polkadot Academy"
+
+[[params.speaking]]
+text = "Regular speaker at conferences including Stanford Blockchain, European Commission, Berkeley Xcelerator, and Exeter School"
+
+[[params.speaking]]
+text = "Work featured across multiple platforms including Decrypt, Coindesk, Cointelegraph, and Forbes"

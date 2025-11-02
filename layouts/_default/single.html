@@ -1,0 +1,15 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+
+{{ define "css" }}
+<link rel="stylesheet" href="/css/post.css">
+{{ end }}
+
+{{ define "main" }}
+<div class="container">
+    <a href="/" class="back-link">← Back to home</a>
+    <article>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </article>
+</div>
+{{ end }}
