@@ -9,6 +9,8 @@ disableKinds = ["taxonomy", "term"]
 author = "Eliott Teissonnière"
 tagline = "Building for progress"
 now = "Satellite robotics infrastructure in San Francisco"
+description = "Eliott Teissonnière - Building for progress"
+ogImage = "/og-image.png"
 
 [[params.social]]
 name = "Github"

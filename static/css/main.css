@@ -25,6 +25,7 @@ body {
     position: sticky;
     top: 60px;
     align-self: start;
+    overflow: hidden;
 }
 
 .sidebar h1 {
@@ -47,6 +48,8 @@ body {
     margin: 40px 0 0 0;
     opacity: 1;
     display: block;
+    transform: scale(1.5);
+    transform-origin: center;
 }
 
 .sidebar-section {
