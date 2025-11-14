@@ -108,6 +108,14 @@ article pre code {
     padding: 0;
 }
 
+article hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 50px auto;
+    width: 60%;
+    opacity: 0.6;
+}
+
 @media (max-width: 900px) {
     body {
         padding: 40px 20px;
