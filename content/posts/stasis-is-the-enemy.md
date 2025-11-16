@@ -37,7 +37,7 @@ The challenge with the debate on progress and whether we should slow down is tha
 
 ---
 
-So here's the real choice: embrace the exponential curve of progress and actively build solutions to the problems around us—or watch from the sidelines as 170,000 people die every day from solvable problems while competitors build the future.
+So here's the real choice: embrace the exponential curve of progress and actively build solutions to the problems around us—or watch from the sidelines while as build the future and hundreds of thousands die from completely avoidable causes.
 
 Progress is not optional. The only choice is whether you participate.
 
